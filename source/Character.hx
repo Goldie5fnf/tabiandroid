@@ -32,7 +32,7 @@ class Character extends FlxSprite
 		{
 			case 'gf':
 				// GIRLFRIEND CODE
-				tex = Paths.getSparrowAtlas('characters/GF_assets');
+				tex = Paths.getSparrowAtlas('characters/GF_TABI');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
 				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
@@ -150,7 +150,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Tabi Down', 24);
 				animation.addByPrefix('singLEFT', 'Tabi Left', 24);
 
-				addOffset('idle');
+				addOffset('idle', 633, 59);
 				addOffset("singUP", 680, 70);
 				addOffset("singRIGHT", 640, 60);
 				addOffset("singLEFT", 783, 59);

@@ -359,6 +359,7 @@ class PlayState extends MusicBeatState
 				var bg:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/normal_stage'));
 				add(bg);
 				var sum:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
+				sum.cameras = [camHUD];
 				add(sum);
 		  }
 			case 'halloween': 
@@ -794,7 +795,10 @@ class PlayState extends MusicBeatState
 			case 'spirit':
 				dad.x -= 150;
 				dad.y += 100;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y)y
+      case 'tabi':
+        dad.x -= 100;
+        dad.y -= 100;
 		}
 
 
@@ -804,6 +808,12 @@ class PlayState extends MusicBeatState
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
+		  case 'curse':
+		    boyfriend.x += 480;
+		    boyfriend.y -= 280;
+		    gf.x += 30;
+		    gf.y -= 30;
+		    
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;
