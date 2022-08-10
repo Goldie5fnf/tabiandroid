@@ -795,7 +795,7 @@ class PlayState extends MusicBeatState
 			case 'spirit':
 				dad.x -= 150;
 				dad.y += 100;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y)y
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
       case 'tabi':
         dad.x -= 100;
         dad.y -= 100;
