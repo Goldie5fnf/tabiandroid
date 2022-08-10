@@ -809,9 +809,9 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'curse':
-				boyfriend.setZoom(1.2);
+                                boyfriend.scale = 1.2;
 				boyfriend.x += 300;
-				gf.setZoom(1.2);
+				gf.scale = 1.2;
 				gf.y -= 110;
 				gf.x -= 50;
 		    
