@@ -809,9 +809,7 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'curse':
-                                boyfriend.scale = 1.2;
 				boyfriend.x += 300;
-				gf.scale = 1.2;
 				gf.y -= 110;
 				gf.x -= 50;
 		    
