@@ -377,14 +377,14 @@ class PlayState extends MusicBeatState
 		switch(SONG.stage)
 		{
 		  case 'curse': 
-					{
-					 defaultCamZoom = 0.6;
-					curStage = 'curse';
-					var bg:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/normal_stage'));
-					add(bg);
-					var sum:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
-					add(sum);
-					
+		  {
+				 defaultCamZoom = 0.6;
+				curStage = 'curse';
+				var bg:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/normal_stage'));
+				add(bg);
+				var sum:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
+				add(sum);
+		  }
 			case 'halloween': 
 			{
 				curStage = 'spooky';
