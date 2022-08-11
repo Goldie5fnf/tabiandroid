@@ -356,7 +356,7 @@ class PlayState extends MusicBeatState
 		{
 		  case 'curse': 
 		  {
-				defaultCamZoom = 0.6;
+				defaultCamZoom = 0.2;
 				curStage = 'curse';
 				var bg:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/normal_stage'));
 				//bg.setGraphicSize(Std.int(bg.width * 0.8));
