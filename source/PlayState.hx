@@ -365,8 +365,8 @@ class PlayState extends MusicBeatState
 				add(bg);
 
 				sum = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
-                                //sum.scrollFactor.set(0.9, 0.9);
-				//sum.setGraphicSize(Std.int(sum.width * 0.8));
+                                sum.scrollFactor.set(0.5, 0.5);
+				sum.setGraphicSize(Std.int(sum.width * 1));
                                 sum.antialiasing = true;
                                 sum.updateHitbox();
 				add(sum);
