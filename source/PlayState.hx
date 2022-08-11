@@ -358,15 +358,15 @@ class PlayState extends MusicBeatState
 		  {
 				defaultCamZoom = 0.6;
 				curStage = 'curse';
-				var bg:FlxSprite = new FlxSprite(-110, -330).loadGraphic(Paths.image('tabi/normal_stage'));
-				bg.setGraphicSize(Std.int(bg.width * 0.8));
+				var bg:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/normal_stage'));
+				//bg.setGraphicSize(Std.int(bg.width * 0.8));
                                 bg.antialiasing = true;
                                 bg.updateHitbox();
 				add(bg);
 
 				sum = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
-                                sum.scrollFactor.set(0.9, 0.9);
-				sum.setGraphicSize(Std.int(sum.width * 0.8));
+                                //sum.scrollFactor.set(0.9, 0.9);
+				//sum.setGraphicSize(Std.int(sum.width * 0.8));
                                 sum.antialiasing = true;
                                 sum.updateHitbox();
 				add(sum);
