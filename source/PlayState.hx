@@ -354,7 +354,7 @@ class PlayState extends MusicBeatState
 		{
 		  case 'curse': 
 		  {
-				 defaultCamZoom = 0.8;
+				 defaultCamZoom = 0.6;
 				curStage = 'curse';
 				var bg:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/normal_stage'));
 				add(bg);
@@ -798,7 +798,7 @@ class PlayState extends MusicBeatState
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
       case 'tabi':
-        dad.x -= 300;
+        dad.x += 100;
 		}
 
 
@@ -810,8 +810,7 @@ class PlayState extends MusicBeatState
 		{
 			case 'curse':
 				boyfriend.x += 300;
-				gf.y -= 110;
-				gf.x -= 50;
+                                boyfriend.y += 50;
 		    
 			case 'limo':
 				boyfriend.y -= 220;
