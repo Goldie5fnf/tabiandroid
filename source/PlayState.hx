@@ -371,7 +371,7 @@ class PlayState extends MusicBeatState
                                 sum.updateHitbox();
 				add(sum);
 
-                                sum.cameras = [camHUD];
+                                //sum.cameras = [camHUD];
 		  }
 			case 'halloween': 
 			{
