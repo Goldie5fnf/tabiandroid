@@ -177,6 +177,8 @@ class PlayState extends MusicBeatState
 	var bottomBoppers:FlxSprite;
 	var santa:FlxSprite;
 
+        var sum:FlxSprite;
+
 	var fc:Bool = true;
 
 	var bgGirls:BackgroundGirls;
@@ -362,12 +364,14 @@ class PlayState extends MusicBeatState
                                 bg.updateHitbox();
 				add(bg);
 
-				var sum:FlxSprite = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
+				sum = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
                                 sum.scrollFactor.set(1.1, 1.1);
 				sum.setGraphicSize(Std.int(sum.width * 0.8));
                                 sum.antialiasing = true;
                                 sum.updateHitbox();
 				add(sum);
+
+                                sum.cameras = [camHUD];
 		  }
 			case 'halloween': 
 			{
