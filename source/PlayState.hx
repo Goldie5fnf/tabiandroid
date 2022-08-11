@@ -363,15 +363,6 @@ class PlayState extends MusicBeatState
                                 bg.antialiasing = true;
                                 bg.updateHitbox();
 				add(bg);
-
-				sum = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
-                                sum.scrollFactor.set(0.5, 0.5);
-				sum.setGraphicSize(Std.int(sum.width * 1));
-                                sum.antialiasing = true;
-                                sum.updateHitbox();
-				add(sum);
-
-                                //sum.cameras = [camHUD];
 		  }
 			case 'halloween': 
 			{
@@ -809,6 +800,7 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
       case 'tabi':
         dad.x += 200;
+        camPos.x -= 200;
 		}
 
 
@@ -820,7 +812,7 @@ class PlayState extends MusicBeatState
 		{
 			case 'curse':
 				boyfriend.x += 300;
-                                boyfriend.y += 50;
+                                boyfriend.y += 25;
 		    
 			case 'limo':
 				boyfriend.y -= 220;
@@ -866,6 +858,17 @@ class PlayState extends MusicBeatState
 
 		add(dad);
 		add(boyfriend);
+
+                if (curStage == 'curse')
+                {
+				sum = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
+                                sum.scrollFactor.set(0.5, 0.5);
+				//sum.setGraphicSize(Std.int(sum.width * 1));
+                                sum.antialiasing = true;
+                                sum.updateHitbox();
+				add(sum);
+                }
+
 		if (loadRep)
 		{
 			FlxG.watch.addQuick('rep rpesses',repPresses);
