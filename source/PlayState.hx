@@ -1151,7 +1151,7 @@ switch (curSong.toLowerCase())
 			            startCountdown();
                                     return;
 	       }
-	       video.playVideo(filepath);
+	       video.playVideo(Paths.video(name));
         }
 
 	function schoolIntro(?dialogueBox:DialogueBox):Void
