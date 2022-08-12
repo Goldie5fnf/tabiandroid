@@ -799,8 +799,8 @@ class PlayState extends MusicBeatState
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
                         case 'tabi':
-                        dad.x += 200;
-                        //camPos.x += 200;
+                                dad.x += 200;
+                                camPos.x -= 200;
 		}
 
 
@@ -862,7 +862,7 @@ class PlayState extends MusicBeatState
                 if (curStage == 'curse')
                 {
 				sum = new FlxSprite(-510, -230).loadGraphic(Paths.image('tabi/sumtable'));
-                                sum.scrollFactor.set(0.5, 0.5);
+                                //sum.scrollFactor.set(0.5, 0.5);
 				//sum.setGraphicSize(Std.int(sum.width * 1));
                                 sum.antialiasing = true;
                                 sum.updateHitbox();
