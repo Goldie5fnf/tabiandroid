@@ -813,6 +813,7 @@ class PlayState extends MusicBeatState
 			case 'curse':
 				boyfriend.x += 500;
                                 boyfriend.y += 25;
+                                gf.x += 200
 		    
 			case 'limo':
 				boyfriend.y -= 220;
