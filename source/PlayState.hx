@@ -800,7 +800,7 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
                         case 'tabi':
                         dad.x += 200;
-                        camPos.x += 200;
+                        //camPos.x += 200;
 		}
 
 
@@ -1132,7 +1132,7 @@ switch (curSong.toLowerCase())
        function playCutscene(name:String, atEndOfSong:Bool = false)
        {
 	        inCutscene = true;
-        	FlxG.sound.music.stop();
+        	//FlxG.sound.music.stop();
 
 	        var video:VideoHandler = new VideoHandler();
 	        video.finishCallback = function()
@@ -1149,8 +1149,9 @@ switch (curSong.toLowerCase())
 		              }
 		              else
 			            startCountdown();
+                                    return;
 	       }
-	       video.playVideo(Paths.video(name));
+	       video.playVideo(filepath);
         }
 
 	function schoolIntro(?dialogueBox:DialogueBox):Void
