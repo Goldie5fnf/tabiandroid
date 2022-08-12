@@ -27,6 +27,13 @@ import sys.io.File;
  */
 class SUtil
 {
+	static final videoFiles:Array<String> = [
+		"end",
+		"firefirefire",
+		"firefirefire2",
+		"tabiwow"
+	];
+
 	/**
 	 * A simple check function
 	 */
@@ -60,29 +67,14 @@ class SUtil
 			if (!FileSystem.exists(SUtil.getPath()))
 				FileSystem.createDirectory(SUtil.getPath());
 
-			if (!FileSystem.exists(SUtil.getPath() + 'assets'))
-			{
-				Application.current.window.alert("Whoops, seems like you didn't extract the files from the .APK!\nPlease watch the tutorial by pressing OK.",
-					'Error!');
-				FlxG.openURL('https://youtu.be/zjvkTmdWvfU');
-				System.exit(1);
-			}
-			else
-			{
-				if (!FileSystem.exists(SUtil.getPath() + 'assets'))
-				{
-					Application.current.window.alert("Whoops, seems like you didn't extract the assets/assets folder from the .APK!\nPlease watch the tutorial by pressing OK.",
-						'Error!');
-					FlxG.openURL('https://youtu.be/zjvkTmdWvfU');
-					System.exit(1);
-				}
-				else if (FileSystem.exists(SUtil.getPath() + 'assets') && !FileSystem.isDirectory(SUtil.getPath() + 'assets'))
-				{
-					Application.current.window.alert("Why did you create a file called assets instead of copying the assets directory from the apk?, expect a crash.",
-						'Error!');
-					System.exit(1);
-				}
-			}
+			if (!FileSystem.exists(SUtil.getPath() + "assets"))
+				FileSystem.createDirectory(SUtil.getPath() + "assets");
+
+			if (!FileSystem.exists(SUtil.getPath() + 'assets/videos'))
+				FileSystem.createDirectory(SUtil.getPath() + 'assets/videos');
+
+			for (vid in videoFiles)
+				SUtil.copyContent(Paths.video(vid), SUtil.getPath() + Paths.video(vid));
 		}
 		#end
 	}
